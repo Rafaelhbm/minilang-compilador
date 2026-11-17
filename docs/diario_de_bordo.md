@@ -8,7 +8,7 @@ foi aceito, o que foi reescrito e por quê).
 **Responsáveis:** Rafael Henrique Barreto Martins, David Carvalho, _terceiro integrante_
 
 ### O que foi feito
-- Leitura do enunciado e definição do plano de sprints (docs/PLANO.md).
+- Definição do plano de sprints (docs/PLANO.md).
 - Estrutura do repositório conforme o enunciado.
 - Gramática EBNF, tabela de precedência e 5 exemplos comentados (docs/gramatica.md).
 - Contratos entre as fases: tipos de token, nós da AST, hierarquia de erros e API do
@@ -17,7 +17,7 @@ foi aceito, o que foi reescrito e por quê).
 ### Uso de IA
 | Pedido à IA | Resultado | Decisão do grupo |
 |---|---|---|
-| Ler o enunciado e propor sprints | Plano em 5 sprints | Aceito com ajustes de datas |
+| Propor divisão em sprints | Plano em 5 sprints | Aceito com ajustes de datas |
 | Rascunho da EBNF com precedência | Gramática LL(1) com um não-terminal por nível | _revisar: aceito / reescrito?_ |
 | Lexer guiado por AFD + tabela de transições | Código com 26 estados; tabela do documento gerada a partir do dicionário de transições do código | _revisar_ |
 | Parser descendente recursivo com modo pânico | Uma função por não-terminal; mensagens "esperado X, encontrado Y" | _revisar_ |
