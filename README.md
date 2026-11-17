@@ -6,9 +6,9 @@ interpretador para a linguagem MiniLang.
 
 ## Integrantes
 
-- _Nome 1_ — _matrícula_
-- _Nome 2_ — _matrícula_
-- _Nome 3_ — _matrícula_
+- Rafael Henrique Barreto Martins
+- David Carvalho
+- _terceiro integrante_
 
 ## Como executar
 
