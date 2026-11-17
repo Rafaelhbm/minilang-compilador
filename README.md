@@ -8,7 +8,7 @@ interpretador para a linguagem MiniLang.
 
 - Rafael Henrique Barreto Martins
 - David Carvalho
-- _terceiro integrante_
+- Gabriel Lopes
 
 ## Como executar
 

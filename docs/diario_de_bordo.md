@@ -5,7 +5,7 @@ foi aceito, o que foi reescrito e por quê).
 
 ## Semana 1 — 17/11/2026 a 23/11/2026
 
-**Responsáveis:** Rafael Henrique Barreto Martins, David Carvalho, _terceiro integrante_
+**Responsáveis:** Rafael Henrique Barreto Martins, David Carvalho, Gabriel Lopes
 
 ### O que foi feito
 - Definição do plano de sprints (docs/PLANO.md).
