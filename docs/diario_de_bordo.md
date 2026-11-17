@@ -1,11 +1,11 @@
 # Diário de bordo
 
-Registro semanal do andamento, incluindo o uso de IA generativa (o que foi pedido, o que
+Registro do andamento por sprint (ver docs/PLANO.md), incluindo o uso de IA generativa (o que foi pedido, o que
 foi aceito, o que foi reescrito e por quê).
 
-## Semana 1 — 17/11/2026 a 23/11/2026
+**Integrantes:** Rafael Henrique Barreto Martins, David Carvalho, Gabriel Lopes
 
-**Responsáveis:** Rafael Henrique Barreto Martins, David Carvalho, Gabriel Lopes
+## Sprint 0 — Fundação (17/11/2026)
 
 ### O que foi feito
 - Definição do plano de sprints (docs/PLANO.md).
@@ -13,6 +13,12 @@ foi aceito, o que foi reescrito e por quê).
 - Gramática EBNF, tabela de precedência e 5 exemplos comentados (docs/gramatica.md).
 - Contratos entre as fases: tipos de token, nós da AST, hierarquia de erros e API do
   interpretador.
+
+## Sprint 1 — Núcleo do compilador (17/11/2026 a 20/11/2026)
+
+### O que foi feito
+- Lexer guiado por AFD, parser descendente recursivo, AST, interpretador e CLI.
+- Testes de cada fase, testes de laços e de laço infinito, catálogo de erros e CI.
 
 ### Uso de IA
 | Pedido à IA | Resultado | Decisão do grupo |
@@ -59,6 +65,14 @@ Registrados a partir dos relatos dos agentes de IA; o grupo deve confirmar cada 
 ### Dificuldades / próximos passos
 - _preencher_
 
-## Semana 2 — 24/11/2026 a 30/11/2026
+## Sprint 2 — Erros e testes (21/11/2026 a 23/11/2026)
+
+_preencher_
+
+## Sprint 3 — Relatório (24/11/2026 a 27/11/2026)
+
+_preencher_
+
+## Sprint 4 — Vídeo e arguição (27/11/2026 a 30/11/2026)
 
 _preencher_
