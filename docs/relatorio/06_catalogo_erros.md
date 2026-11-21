@@ -54,6 +54,11 @@ Cada arquivo tem no topo um comentário com o erro esperado. Saídas reais, obti
 `python -m src <arquivo>` (o comentário inicial de cada arquivo ocupa as primeiras linhas,
 por isso os erros aparecem a partir da linha 3 ou 4).
 
+O teste `tests/invalidos/test_exemplos_de_erro.py` lê esse comentário de cada arquivo,
+roda o programa pela CLI e confere categoria, linha e coluna (quando informada), código
+de saída 1 e ausência de traceback. Se o compilador mudar e um exemplo deixar de produzir
+o erro anunciado, a suíte falha.
+
 ### Léxicos
 
 ```

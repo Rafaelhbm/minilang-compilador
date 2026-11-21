@@ -91,7 +91,7 @@ pytest tests/invalidos       # só casos de erro (léxico, sintático, semântic
 pytest tests/validos/test_lacos.py -v   # um arquivo, mostrando cada teste
 ```
 
-Os testes também rodam no GitHub Actions (Python 3.9 e 3.12) a cada push, configurado em
+Os testes também rodam no GitHub Actions (Python 3.10 e 3.12) a cada push, configurado em
 [.github/workflows/tests.yml](.github/workflows/tests.yml).
 
 ## Arquitetura

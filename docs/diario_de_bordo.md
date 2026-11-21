@@ -67,7 +67,31 @@ Registrados a partir dos relatos dos agentes de IA; o grupo deve confirmar cada 
 
 ## Sprint 2 — Erros e testes (21/11/2026 a 23/11/2026)
 
-_preencher_
+### O que foi feito
+- Catálogo de erros por categoria (léxico, sintático, semântico) com mensagem, causa e
+  exemplo de cada um (docs/relatorio/06_catalogo_erros.md).
+- 9 programas de demonstração em exemplos/erros/, 3 por categoria, cada um com o erro
+  esperado (categoria, linha e coluna) anunciado no comentário da primeira linha.
+- Novo teste tests/invalidos/test_exemplos_de_erro.py: roda cada exemplo pela CLI e
+  confere se o erro produzido é o anunciado (categoria, linha, coluna, código de saída 1,
+  sem traceback). Assim o catálogo e os exemplos não ficam desatualizados.
+- Suíte de borda dos laços (tests/validos/test_lacos.py): zero, uma e N iterações, passo
+  diferente de 1, laço decrescente, variável de controle alterada no corpo, valor depois
+  do laço, laços aninhados.
+- Laço infinito (tests/invalidos/test_laco_infinito.py): limite exato N (passa) e N+1
+  (erro), contadores independentes por laço, saída anterior ao erro preservada.
+- CI no GitHub Actions com Python 3.10 e 3.12 (o 3.9 saiu do runner Ubuntu atual).
+- Total: 325 testes passando.
+
+### Uso de IA
+| Pedido à IA | Resultado | Decisão do grupo |
+|---|---|---|
+| Teste que valide os exemplos de erro contra o comentário de cada arquivo | Teste parametrizado com 19 casos | _revisar: aceito / reescrito?_ |
+| Atualizar README e diário da sprint | Correção da versão do Python no README e este registro | _revisar_ |
+
+### Dificuldades / próximos passos
+- Preencher a coluna "Decisão do grupo" das tabelas de uso de IA (Sprints 1 e 2).
+- Sprint 3: introdução do relatório, pesquisa sobre IA (2–3 páginas) e relatorio.pdf.
 
 ## Sprint 3 — Relatório (24/11/2026 a 27/11/2026)
 
