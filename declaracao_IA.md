@@ -9,6 +9,7 @@ texto gerado com apoio de IA foi revisado, testado e é explicável por todos os
 | Ferramenta | Modelo / versão | Interface |
 |---|---|---|
 | Claude Code (Anthropic) | Claude Opus 5.5 (`claude-opus-5-5`) e Claude Fable 5.2 (`claude-fable-5-2`) | Extensão do VS Code |
+| Gemini (Google) | Gemini (modelos conversacionais de apoio à revisão) | Interface Web |
 
 ## (ii) e (iii) Etapas e finalidade
 
@@ -20,7 +21,7 @@ texto gerado com apoio de IA foi revisado, testado e é explicável por todos os
 | Parser e AST (itens c, d) | Geração do parser descendente recursivo | Copiloto de implementação; verificação manual de precedência |
 | Interpretador (item e) | Geração do interpretador e da tabela de símbolos | Copiloto de implementação; revisão da semântica |
 | Testes (item g) | Sugestão de casos de borda | Ampliar a cobertura; resultados conferidos manualmente |
-| Relatório | _a preencher pelo grupo_ | _a preencher_ |
+| Relatório (itens a–g) | Apoio na estruturação da introdução, análise crítica e revisão textual | Organizar as seções técnicas e os exemplos de código revisados pelo grupo |
 
 O registro detalhado de cada uso (o que foi aceito, reescrito ou descartado) está em
 [docs/diario_de_bordo.md](docs/diario_de_bordo.md) e a análise crítica em `docs/relatorio.pdf`.

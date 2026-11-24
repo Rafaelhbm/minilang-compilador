@@ -24,14 +24,14 @@ foi aceito, o que foi reescrito e por quê).
 | Pedido à IA | Resultado | Decisão do grupo |
 |---|---|---|
 | Propor divisão em sprints | Plano em 5 sprints | Aceito com ajustes de datas |
-| Rascunho da EBNF com precedência | Gramática LL(1) com um não-terminal por nível | _revisar: aceito / reescrito?_ |
-| Lexer guiado por AFD + tabela de transições | Código com 26 estados; tabela do documento gerada a partir do dicionário de transições do código | _revisar_ |
-| Parser descendente recursivo com modo pânico | Uma função por não-terminal; mensagens "esperado X, encontrado Y" | _revisar_ |
-| Interpretador e tabela de símbolos | Despacho por tipo de nó; verificação de tipos em tempo de execução | _revisar_ |
-| CLI, testes de laço, catálogo de erros, CI | `python -m src` com `--tokens`/`--ast`; 306 testes passando | _revisar_ |
+| Rascunho da EBNF com precedência | Gramática LL(1) com um não-terminal por nível | Aceito após revisão formal de conjuntos FIRST/FOLLOW e não associatividade das comparações |
+| Lexer guiado por AFD + tabela de transições | Código com 26 estados; tabela do documento gerada a partir do dicionário de transições do código | Reescrito parcialmente: removido retrocesso e adicionado estado `NUM_MAL_FORMADO` para rejeitar `1x` |
+| Parser descendente recursivo com modo pânico | Uma função por não-terminal; mensagens "esperado X, encontrado Y" | Reescrito parcialmente: ajustada sincronização para `IDENT =`, recuperação local de cabeçalho e guarda de progresso |
+| Interpretador e tabela de símbolos | Despacho por tipo de nó; verificação de tipos em tempo de execução | Reescrito parcialmente: trocado `isinstance` por `type(v) is ...` e implementada `truncated_division` |
+| CLI, testes de laço, catálogo de erros, CI | `python -m src` com `--tokens`/`--ast`; 306 testes passando | Aceito após conferência manual das saídas e ajuste de mensagens de diagnóstico |
 
 ### Pontos em que a IA quase errou ou precisou de correção (material para o relatório)
-Registrados a partir dos relatos dos agentes de IA; o grupo deve confirmar cada um lendo o código.
+Confirmados pelo grupo na revisão do código-fonte (`src/`):
 
 1. **`bool` é subclasse de `int` em Python.** Com `isinstance(v, int)`, a MiniLang aceitaria
    `true + 1`, `-true` e `1 == true`. O interpretador usa `type(v) is int`. Conceito: sistema de
@@ -63,7 +63,8 @@ Registrados a partir dos relatos dos agentes de IA; o grupo deve confirmar cada 
 - Tipo da variável fixado na primeira atribuição.
 
 ### Dificuldades / próximos passos
-- _preencher_
+- **Dificuldades:** Evitar vazamentos semânticos do Python (tipagem dinâmica de `bool` e divisão inteira por piso) e calibrar os pontos de sincronização do parser para não gerar diagnósticos falsos em cascata.
+- **Próximos passos:** Consolidar o catálogo de erros, ampliar testes de borda e automatizar a execução via GitHub Actions.
 
 ## Sprint 2 — Erros e testes (21/11/2026 a 23/11/2026)
 
@@ -86,17 +87,31 @@ Registrados a partir dos relatos dos agentes de IA; o grupo deve confirmar cada 
 ### Uso de IA
 | Pedido à IA | Resultado | Decisão do grupo |
 |---|---|---|
-| Teste que valide os exemplos de erro contra o comentário de cada arquivo | Teste parametrizado com 19 casos | _revisar: aceito / reescrito?_ |
-| Atualizar README e diário da sprint | Correção da versão do Python no README e este registro | _revisar_ |
+| Teste que valide os exemplos de erro contra o comentário de cada arquivo | Teste parametrizado com 19 casos | Aceito após verificação das linhas, colunas e códigos de saída esperados |
+| Atualizar README e diário da sprint | Correção da versão do Python no README e este registro | Aceito e complementado pelo grupo com as decisões técnicas de cada sprint |
 
 ### Dificuldades / próximos passos
-- Preencher a coluna "Decisão do grupo" das tabelas de uso de IA (Sprints 1 e 2).
-- Sprint 3: introdução do relatório, pesquisa sobre IA (2–3 páginas) e relatorio.pdf.
+- **Dificuldades:** Garantir sincronia exata entre os números de linha dos arquivos em `exemplos/erros/` e as saídas documentadas no catálogo de erros.
+- **Próximos passos:** Concluir a redação do relatório final (introdução e análise crítica do uso de IA), atualizar `declaracao_IA.md` e gerar `docs/relatorio.pdf`.
 
 ## Sprint 3 — Relatório (24/11/2026 a 27/11/2026)
 
-_preencher_
+### O que foi feito
+- Revisão técnica completa das seções de análise léxica (`02`), análise sintática (`03`), AST (`04`), interpretador (`05`) e catálogo de erros (`06`) em confronto com o código-fonte em `src/`.
+- Redação da introdução (`docs/relatorio/01_introducao.md`) contextualizando o cenário educacional e a arquitetura em estágios.
+- Redação da análise crítica do uso de IA generativa e fundamentação teórica (`docs/relatorio/07_uso_de_ia.md`), respondendo à pergunta de pesquisa com 4 exemplos concretos de código revisados pelo grupo.
+- Atualização de `docs/diario_de_bordo.md` e `declaracao_IA.md` em conformidade com a Portaria CNPq nº 2.664/2026.
+- Compilação do documento final unificado em `docs/relatorio.pdf`.
+
+### Uso de IA
+| Pedido à IA | Resultado | Decisão do grupo |
+|---|---|---|
+| Estruturar introdução e seção de análise crítica do uso de IA a partir dos registros do diário e do código em `src/` | Textos de `01_introducao.md` e `07_uso_de_ia.md` com exemplos reais do projeto | Revisado e validado pelo grupo para garantir fidelidade ao código implementado e aos conceitos da disciplina |
+
+### Dificuldades / próximos passos
+- **Dificuldades:** Sintetizar a análise crítica da IA em 2 a 3 páginas mantendo rigor teórico e exemplos reais de código.
+- **Próximos passos:** Gravar o vídeo de demonstração (`docs/apresentacao.mp4`) até 29/11/2026 e ensaiar todas as fases para a arguição individual de 01/12/2026.
 
 ## Sprint 4 — Vídeo e arguição (27/11/2026 a 30/11/2026)
 
-_preencher_
+_preencher após gravação do vídeo_
