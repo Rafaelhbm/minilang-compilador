@@ -12,7 +12,7 @@ interpretador para a linguagem MiniLang.
 
 ## Como executar
 
-Requisito: Python 3.9 ou mais novo.
+Requisito: Python 3.10 ou mais novo.
 
 ```bash
 python3 -m venv .venv
